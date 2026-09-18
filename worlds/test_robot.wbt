@@ -24,7 +24,7 @@ Robot {
       children [
         Shape {
           appearance PBRAppearance {
-            baseColor 0.878431 1 0.262745
+            baseColor 1 0.333333 0
             metalness 0
           }
           geometry DEF CUERPO_CARRO Box {

@@ -1,12 +1,4 @@
-// File:          avanzador.cpp
-// Date:          18 Ago 2026
-// Description:   Un controlador de jemplo para un robot en webots
-// Author:        
-// Modifications: 
 
-// You may need to add webots include files such as
-// <webots/DistanceSensor.hpp>, <webots/Motor.hpp>, etc.
-// and/or to add some other includes
 #include <webots/Robot.hpp>
 #include <webots/Motor.hpp>
 
@@ -29,7 +21,8 @@ int main(int argc, char **argv) {
 
   // You should insert a getDevice-like function in order to get the
   // instance of a device of the robot. Something like:
-  Motor *motor = robot->getMotor("left wheel motor");
+    Motor *motor = robot->getMotor("MOTOR1");
+    motor-> setPosition(INFINITY);
   //  DistanceSensor *ds = robot->getDistanceSensor("dsname");
   //  ds->enable(timeStep);
 
@@ -43,7 +36,7 @@ int main(int argc, char **argv) {
     // Process sensor data here.
 
     // Enter here functions to send actuator commands, like:
-    motor->setPosition(10.0);
+      motor->setVelocity(10.0);
   };
 
   // Enter here exit cleanup code.
